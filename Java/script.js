@@ -75,7 +75,10 @@ function getPasswordOptions() {
   // Object to store user input
   var passwordOptions = {
     length: length,
-    // add more properties and values here
+    lowercaseCharacters: haslowercaseCharacters,
+    uppercaseCharacters: hasuppercaseCharacters,
+    numericCharacters: hasnumericCharacters,
+    specialCharacters: hasspecialCharacters,
   }
 
   return passwordOptions;
