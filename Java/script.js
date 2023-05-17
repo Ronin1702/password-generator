@@ -17,7 +17,7 @@ var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numericCharacters = "01234567879";
 //the specialCharacters below I learned the usable string from https://stackoverflow.com/questions/11896599/javascript-code-to-check-special-characters
-var specialCharacters ="~`!#$%^&*+=-[]\\\';,/{}|\":<>?";
+var specialCharacters = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?";
 // The string provided by the orgianl instruction readme didn't seem to work https://owasp.org/www-community/password-special-characters
 // var specialCharacters=" !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
@@ -37,16 +37,16 @@ function getPasswordOptions() {
   var length = parseInt(
     // WHEN prompted for the length of the password
     // THEN I choose a length of at least 8 characters and no more than 128 characters
-    prompt('How many characters would you like your password to contain?(Please Select no less then 8 and no more than 128 characters.)'),
+    prompt('How many characters would you like your password to contain? (Please Select no less then 8 and no more than 128 characters.)'),
     10
   );
 
   // use if function to make sure the user select the password between 8 and 128 characters.
-  if (length<8){
-    alert("The length of your password might not be secure!");
+  if (length < 8) {
+    alert("The Length of Your Password Is too Short to be Secure!");
     return;
-  } else if (length > 128){
-    alert("The length of your password is over our budget!");
+  } else if (length > 128) {
+    alert("The Length of Your Password Is Way Over Our Budget!");
     return;
   }
 
