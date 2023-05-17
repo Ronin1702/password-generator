@@ -58,9 +58,19 @@ function getPasswordOptions() {
   }
 
   // Variable to store boolean regarding the inclusion of special characters
-  var hasSpecialCharacters = confirm(
-    'Click OK to confirm including special characters.'
+  var hasspecialCharacters = confirm(
+    'Click OK to confirm including SPECIAL character(s).'
   );
+  var haslowercaseCharacters = confirm(
+    'Click OK to confirm including LOWER case character(s).'
+  );
+  var hasuppercaseCharacters = confirm(
+    'Click OK to confirm including UPPER case character(s).'
+  );
+  var hasnumericCharacters = confirm(
+    'Click OK to confirm including NUMERIC character(s).'
+  );
+
 
   // Object to store user input
   var passwordOptions = {
