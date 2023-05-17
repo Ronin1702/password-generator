@@ -117,14 +117,29 @@ function generatePassword() {
   if (!options) return null;
 
   // Conditional statement that adds array of special characters into array of possible characters based on user input
+  
   // Push new random special character to guaranteedCharacters
   if (options.hasSpecialCharacters) {
     possibleCharacters = possibleCharacters.concat(specialCharacters);
     guaranteedCharacters.push(getRandom(specialCharacters));
   }
+// Push new random lowercase character to guaranteedCharacters
+  if (options.haslowercaseCharacters) {
+    possibleCharacters = possibleCharacters.concat(lowercaseCharacters);
+    guaranteedCharacters.push(getRandom(lowercaseCharacters));
+  }
+// Push new random uppercase character to guaranteedCharacters
+  if (options.hasuppercaseCharacters) {
+    possibleCharacters = possibleCharacters.concat(uppercaseCharacters);
+    guaranteedCharacters.push(getRandom(uppercaseCharacters));
+  }
 
+  if (options.hasnumericCharacters) {
+    possibleCharacters = possibleCharacters.concat(numericCharacters);
+    guaranteedCharacters.push(getRandom(numericCharacters));
+  }
 
-
+  result=result.concat(guaranteedCharacters);
 
   // Transform the result into a string and pass into writePassword
   return result.join('');
