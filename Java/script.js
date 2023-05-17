@@ -10,8 +10,7 @@ var generateBtn = document.querySelector("#generate");
 // WHEN prompted for password criteria
 // THEN I select which criteria to include in the password
 
-// WHEN asked for character types to include in the password
-// THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
+
 
 var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -57,18 +56,25 @@ function getPasswordOptions() {
     return null;
   }
 
-  // Variable to store boolean regarding the inclusion of special characters
-  var hasspecialCharacters = confirm(
-    'Click OK to confirm including SPECIAL character(s).'
-  );
+  // WHEN asked for character types to include in the password
+  // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
+  
+ 
+// Variable to store boolean regarding the inclusion of lowercase characters
   var haslowercaseCharacters = confirm(
     'Click OK to confirm including LOWER case character(s).'
   );
+// Variable to store boolean regarding the inclusion of upper case characters
   var hasuppercaseCharacters = confirm(
     'Click OK to confirm including UPPER case character(s).'
   );
+// Variable to store boolean regarding the inclusion of numbers
   var hasnumericCharacters = confirm(
     'Click OK to confirm including NUMERIC character(s).'
+  );
+   // Variable to store boolean regarding the inclusion of special characters
+  var hasspecialCharacters = confirm(
+    'Click OK to confirm including SPECIAL character(s).'
   );
 
 
