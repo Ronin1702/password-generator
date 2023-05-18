@@ -1,7 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
 // below I define each possible Characters catagories
 var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
 var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -12,20 +11,13 @@ var specialCharacters = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?".split("");
 // var specialCharacters=" !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
 
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
-
-
-
 function getPasswordOptions() {
 
   // Variable to store length of password from user input
   var length = parseInt(
     // WHEN prompted for the length of the password
     // THEN I choose a length of at least 8 characters and no more than 128 characters
+    // \n sends the text behind to the next new line.
     prompt('How many characters would you like your password to contain?\n(Please Select no less then 8 and no more than 128 characters.)'),
     10
   );
@@ -45,6 +37,9 @@ function getPasswordOptions() {
     alert('Password length must be provided as a number');
     return null;
   }
+  // WHEN I answer each prompt
+  // THEN my input should be validated and at least one character type should be selected
+
 
   // WHEN asked for character types to include in the password
   // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
@@ -135,6 +130,8 @@ function generatePassword() {
   return result.join('');
 }
 
+// WHEN the password is generated
+// THEN the password is either displayed in an alert or written to the page
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
