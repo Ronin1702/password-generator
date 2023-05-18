@@ -2,16 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 
-
-//---- Let me start by saying this code is totally optional and if you want to go in a completely different direction I support it. Go with your gut and what works for you because it will help you figure out your thought process.Let us know if you have any questions and don't be afraid to start a dialogue with fellow students!  ----------------------- Delete this before you push your code to github LOL 
-// GIVEN I need a new, secure password
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-
-
-
+// below I define each possible Characters catagories
 var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
 var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var numericCharacters = "01234567879".split("");
@@ -23,8 +14,7 @@ var specialCharacters = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?".split("");
 
 // WHEN I answer each prompt
 // THEN my input should be validated and at least one character type should be selected
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
+
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
 
@@ -36,7 +26,7 @@ function getPasswordOptions() {
   var length = parseInt(
     // WHEN prompted for the length of the password
     // THEN I choose a length of at least 8 characters and no more than 128 characters
-    prompt('How many characters would you like your password to contain? (Please Select no less then 8 and no more than 128 characters.)'),
+    prompt('How many characters would you like your password to contain?\n(Please Select no less then 8 and no more than 128 characters.)'),
     10
   );
 
@@ -58,21 +48,21 @@ function getPasswordOptions() {
 
   // WHEN asked for character types to include in the password
   // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-  
- 
-// Variable to store boolean regarding the inclusion of lowercase characters
+
+
+  // Variable to store boolean regarding the inclusion of lowercase characters
   var haslowercaseCharacters = confirm(
     'Click OK to confirm including LOWER case character(s).'
   );
-// Variable to store boolean regarding the inclusion of upper case characters
+  // Variable to store boolean regarding the inclusion of upper case characters
   var hasuppercaseCharacters = confirm(
     'Click OK to confirm including UPPER case character(s).'
   );
-// Variable to store boolean regarding the inclusion of numbers
+  // Variable to store boolean regarding the inclusion of numbers
   var hasnumericCharacters = confirm(
     'Click OK to confirm including NUMERIC character(s).'
   );
-   // Variable to store boolean regarding the inclusion of special characters
+  // Variable to store boolean regarding the inclusion of special characters
   var hasspecialCharacters = confirm(
     'Click OK to confirm including SPECIAL character(s).'
   );
@@ -117,18 +107,18 @@ function generatePassword() {
   if (!options) return null;
 
   // Conditional statement that adds array of special characters into array of possible characters based on user input
-  
+
   // Push new random special character to guaranteedCharacters
   if (options.hasSpecialCharacters) {
     possibleCharacters = possibleCharacters.concat(specialCharacters);
     guaranteedCharacters.push(getRandom(specialCharacters));
   }
-// Push new random lowercase character to guaranteedCharacters
+  // Push new random lowercase character to guaranteedCharacters
   if (options.haslowercaseCharacters) {
     possibleCharacters = possibleCharacters.concat(lowercaseCharacters);
     guaranteedCharacters.push(getRandom(lowercaseCharacters));
   }
-// Push new random uppercase character to guaranteedCharacters
+  // Push new random uppercase character to guaranteedCharacters
   if (options.hasuppercaseCharacters) {
     possibleCharacters = possibleCharacters.concat(uppercaseCharacters);
     guaranteedCharacters.push(getRandom(uppercaseCharacters));
@@ -139,7 +129,7 @@ function generatePassword() {
     guaranteedCharacters.push(getRandom(numericCharacters));
   }
 
-  result=result.concat(guaranteedCharacters);
+  result = result.concat(guaranteedCharacters);
 
   // Transform the result into a string and pass into writePassword
   return result.join('');
