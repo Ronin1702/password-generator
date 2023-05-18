@@ -37,9 +37,13 @@ function getPasswordOptions() {
     alert('Password length must be provided as a number');
     return null;
   }
+
   // WHEN I answer each prompt
   // THEN my input should be validated and at least one character type should be selected
-
+  if (confirm.hasspecialCharacters = false) {
+    alert("At least one chararter type should be selected.");
+    return null;
+  }
 
   // WHEN asked for character types to include in the password
   // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
@@ -104,35 +108,40 @@ function generatePassword() {
   // Conditional statement that adds array of special characters into array of possible characters based on user input
 
   // Push new random special character to guaranteedCharacters
-  if (options.hasSpecialCharacters) {
+  if (options.SpecialCharacters) {
     possibleCharacters = possibleCharacters.concat(specialCharacters);
     guaranteedCharacters.push(getRandom(specialCharacters));
   }
   // Push new random lowercase character to guaranteedCharacters
-  if (options.haslowercaseCharacters) {
+  if (options.lowercaseCharacters) {
     possibleCharacters = possibleCharacters.concat(lowercaseCharacters);
     guaranteedCharacters.push(getRandom(lowercaseCharacters));
   }
   // Push new random uppercase character to guaranteedCharacters
-  if (options.hasuppercaseCharacters) {
+  if (options.uppercaseCharacters) {
     possibleCharacters = possibleCharacters.concat(uppercaseCharacters);
     guaranteedCharacters.push(getRandom(uppercaseCharacters));
   }
 
-  if (options.hasnumericCharacters) {
+  if (options.numericCharacters) {
     possibleCharacters = possibleCharacters.concat(numericCharacters);
     guaranteedCharacters.push(getRandom(numericCharacters));
   }
 
+  // THEN the password is either displayed in an alert or written to the page
+  // Write password to the #password input
   result = result.concat(guaranteedCharacters);
+
+  for (i = result.length; i < options.length; i++) {
+    result.push(getRandom(possibleCharacters));
+  }
 
   // Transform the result into a string and pass into writePassword
   return result.join('');
 }
 
 // WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
-// Write password to the #password input
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
