@@ -70,7 +70,10 @@ function getPasswordOptions() {
   return passwordOptions;
 }
 
+if (!passwordOptions){
+  alert("Must inlcude one charater.");
 
+return}
 
 // Function for getting a random element from an array(all instances of arr will be replaced by an ACTUAL VALUE when we do our callback.)
 function getRandom(arr) {
