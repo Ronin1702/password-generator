@@ -38,10 +38,10 @@ function getPasswordOptions() {
     return null;
   }
 
-
+  
   // WHEN asked for character types to include in the password
   // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-
+  
   // Variable to store boolean regarding the inclusion of lowercase characters
   var haslowercaseCharacters = confirm('Click OK to confirm including LOWER case character(s).');
   // Variable to store boolean regarding the inclusion of upper case characters
@@ -51,10 +51,10 @@ function getPasswordOptions() {
   // Variable to store boolean regarding the inclusion of special characters
   var hasspecialCharacters = confirm('Click OK to confirm including SPECIAL character(s).');
 
-
-  // WHEN I answer each prompt
-  // THEN my input should be validated and at least one character type should be selected
-
+  
+// WHEN I answer each prompt
+// THEN my input should be validated and at least one character type should be selected
+ 
 
 
 
@@ -70,10 +70,7 @@ function getPasswordOptions() {
   return passwordOptions;
 }
 
-if (!passwordOptions){
-  alert("Must inlcude one charater.");
 
-return}
 
 // Function for getting a random element from an array(all instances of arr will be replaced by an ACTUAL VALUE when we do our callback.)
 function getRandom(arr) {
