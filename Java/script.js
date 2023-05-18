@@ -12,11 +12,11 @@ var generateBtn = document.querySelector("#generate");
 
 
 
-var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
-var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numericCharacters = "01234567879";
+var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
+var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var numericCharacters = "01234567879".split("");
 //the specialCharacters below I learned the usable string from https://stackoverflow.com/questions/11896599/javascript-code-to-check-special-characters
-var specialCharacters = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?";
+var specialCharacters = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?".split("");
 // The string provided by the orgianl instruction readme didn't seem to work https://owasp.org/www-community/password-special-characters
 // var specialCharacters=" !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
