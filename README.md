@@ -9,6 +9,14 @@ This site has direct forward and instructive window messages and ituitive button
 <li>Numeric Characters</li>
 <li>Special Characters</li>
 
+<br>
+
 A number must be entered when first prompt for password length, or else an alert message will show to remind the users<br>
 
+Here you may find the links to my work:<br>
+<li>[Deployed Website](ronin1702.github.io/password-generator)</li>
+<li>[Repo](https://github.com/Ronin1702/password-generator)</li>
+<br>
 
+Here is a screenshot to the deployed website:<br>
+![screenshot](./Images/PasswordGeneratorScreenshot.png)
