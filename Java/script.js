@@ -38,33 +38,24 @@ function getPasswordOptions() {
     return null;
   }
 
-  // WHEN I answer each prompt
-  // THEN my input should be validated and at least one character type should be selected
-  if (confirm.hasspecialCharacters = false) {
-    alert("At least one chararter type should be selected.");
-    return null;
-  }
 
   // WHEN asked for character types to include in the password
   // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
 
-
   // Variable to store boolean regarding the inclusion of lowercase characters
-  var haslowercaseCharacters = confirm(
-    'Click OK to confirm including LOWER case character(s).'
-  );
+  var haslowercaseCharacters = confirm('Click OK to confirm including LOWER case character(s).');
   // Variable to store boolean regarding the inclusion of upper case characters
-  var hasuppercaseCharacters = confirm(
-    'Click OK to confirm including UPPER case character(s).'
-  );
+  var hasuppercaseCharacters = confirm('Click OK to confirm including UPPER case character(s).');
   // Variable to store boolean regarding the inclusion of numbers
-  var hasnumericCharacters = confirm(
-    'Click OK to confirm including NUMERIC character(s).'
-  );
+  var hasnumericCharacters = confirm('Click OK to confirm including NUMERIC character(s).');
   // Variable to store boolean regarding the inclusion of special characters
-  var hasspecialCharacters = confirm(
-    'Click OK to confirm including SPECIAL character(s).'
-  );
+  var hasspecialCharacters = confirm('Click OK to confirm including SPECIAL character(s).');
+
+
+  // WHEN I answer each prompt
+  // THEN my input should be validated and at least one character type should be selected
+
+
 
 
   // Object to store user input
