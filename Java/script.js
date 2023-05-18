@@ -54,9 +54,6 @@ function getPasswordOptions() {
   
 // WHEN I answer each prompt
 // THEN my input should be validated and at least one character type should be selected
- 
-
-
 
   // Object to store user input
   var passwordOptions = {
@@ -97,9 +94,8 @@ function generatePassword() {
   if (!options) return null;
 
   // Conditional statement that adds array of special characters into array of possible characters based on user input
-
   // Push new random special character to guaranteedCharacters
-  if (options.SpecialCharacters) {
+  if (options.specialCharacters) {
     possibleCharacters = possibleCharacters.concat(specialCharacters);
     guaranteedCharacters.push(getRandom(specialCharacters));
   }
